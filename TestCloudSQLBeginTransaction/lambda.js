@@ -7,12 +7,12 @@ exports.handler = function (event, context, callback) {
     // You must always end/destroy the DB connection after it's used.
     sql.beginTransaction({
         instanceIdentifier: 'test-instance-2'
-    }, function (error, connection) {
+    }, function (error,connection) {
         if (error) {
             throw error;
         }
-        else {
-            console.log("pass");
+        else{
+            console.log("Pass");
         }
         connection.end();
     });
